@@ -4,23 +4,119 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hr.domain.ResultData;
 import com.hr.domain.User;
+import com.hr.domain.VO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
+
+
+    @PostMapping("/quick23")
+    @ResponseBody
+    public void save23(String username, MultipartFile[] files) throws IOException {
+        System.out.println(username);
+        //获得上传文件的名称
+        for (MultipartFile file : files) {
+            String originalFilename = file.getOriginalFilename();
+            //转移文件 保存
+            file.transferTo(new File("C:\\upload\\" + originalFilename));
+            System.out.println(file);
+        }
+    }
+
+    @PostMapping("/quick22")
+    @ResponseBody
+    public void save22(String username, MultipartFile file) throws IOException {
+        System.out.println(username);
+        //获得上传文件的名称
+        String originalFilename = file.getOriginalFilename();
+        //转移文件 保存
+        file.transferTo(new File("C:\\upload\\" + originalFilename));
+        System.out.println(file);
+    }
+
+
+    @GetMapping("/quick21")
+    @ResponseBody
+    public void save21(@CookieValue(value ="JSESSIONID") String jsessionid) {
+        System.out.println(jsessionid);
+    }
+
+    @GetMapping("/quick20")
+    @ResponseBody
+    public void save20(@RequestHeader(value = "User-Agent", required = false) String user_Agent) {
+        System.out.println(user_Agent);
+    }
+
+    @GetMapping("/quick18")
+    @ResponseBody
+    public void save18(Date date) {
+        //Mon Dec 12 00:00:00 CST 1910
+        System.out.println(date);
+    }
+
+    @GetMapping("/quick17/{name}")
+    @ResponseBody
+    public void save17(@PathVariable(value = "name") String name) {
+        System.out.println(name);
+    }
+
+
+    @GetMapping("/quick16")
+    @ResponseBody
+    public void save16(@RequestParam(value = "name", required = false, defaultValue = "hr") String username) {
+        System.out.println(username);
+    }
+
+    @PostMapping("/quick15")
+    @ResponseBody
+    public void save15(@RequestBody List<User> userList) {
+        System.out.println(userList);
+    }
+
+    @PostMapping("/quick14")
+    @ResponseBody
+    public void save14(VO vo) {
+        System.out.println(vo);
+    }
+
+    //http://localhost:8080/spring_mvc_war_exploded/user/quick13?strs=111&strs=2
+    @GetMapping("/quick13")
+    @ResponseBody
+    public void save13(String[] strs){
+        //[111, 2]
+        System.out.println(Arrays.asList(strs));
+    }
+
+
+    @GetMapping("/quick12")
+    @ResponseBody
+    public void save12(User user){
+        //User{username='zhangsan', age=11}
+        System.out.println(user);
+    }
+
+
+    @GetMapping("/quick11")
+    @ResponseBody
+    public void save11(String username, int age){
+        System.out.println(username);
+        System.out.println(age);
+    }
 
 
     @GetMapping("/quick5555")

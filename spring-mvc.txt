@@ -1,0 +1,27 @@
+SpringMVC获得请求数据:
+
+1 获得基本类型参数
+Controller中的业务方法的参数名称要与请求参数的name一致, 参数值会自动映射匹配,并且会自动匹配数据类型
+2 获得POJO
+3 获得数组
+4 获得集合数据:
+    1 封装一个POJO,
+    2 当使用ajax提交时, 可以指定contentType为json形式, 那么在方法参数位置使用@RequestBody可以直接接收集合数据而无需使用POJO封装
+
+2 @RequestParam注解时候, 默认是required=true, 必须要指定这个请求参数, defaultValue, 当没有指定请求参数时,则使用指定的默认值赋值
+
+3 Restful风格参数
+    /user/1 GET请求, DELETE请求, PUT请求, POST请求
+    @PathVariable
+
+4 自定义类型转换器, 将字符串转换成指定格式的date数据
+
+5 获得请求头 @RequestHeader  @CookieValue
+
+
+6 文件上传
+
+
+7 SpringMVC拦截器
+    作用: 类似于Servlet开发中的过滤器Filter, 用于对处理进行预处理和后处理
+
