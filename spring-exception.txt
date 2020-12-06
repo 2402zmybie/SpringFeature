@@ -1,0 +1,7 @@
+异常处理方式:
+    1 Spring定义的异常处理器 : SimpleMappingExceptionResolver
+    2 也可自定义异常处理器: MyExceptionResolver
+
+所以以后有异常信息  一直向外抛出, 直到Controller web端也向外抛出, 因为有框架的异常处理器帮我们处理, 并且没有和业务代码耦合, 解耦的思想
+
+
