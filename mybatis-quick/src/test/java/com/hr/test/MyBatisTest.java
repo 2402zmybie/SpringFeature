@@ -14,6 +14,22 @@ import java.util.List;
 
 public class MyBatisTest {
 
+    //查询一个数据
+    @Test
+    public void test5() throws IOException {
+        //加载核心配置文件
+        InputStream resourceAsStream = Resources.getResourceAsStream("sqlMapConfig.xml");
+        //获得session工厂对象
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
+        //获得session会话对象
+        SqlSession session = sqlSessionFactory.openSession();
+        //执行操作 namespace+id
+        User user = session.selectOne("userMapper.findById", 1);
+        System.out.println(user);
+        //释放资源
+        session.close();
+    }
+
 
     @Test
     public void test4() throws IOException {

@@ -1,0 +1,36 @@
+typeAliases标签:
+    mybatis框架已经为我们设置好一些常用的类型的别名
+    别名: string,long,int,double,boolean
+    类型: String,Long,Integer,Double,Boolean
+
+
+mybatis核心配置文件小结
+    configuration里面的配置文件:
+    1 properties标签
+    2 typeAliases标签
+    1 mappers标签
+
+
+代理开发方式:
+    采用Mybatis代理开发方式实现Dao层的开发, Mapper接口开发方式只需要程序员编写Mapper接口,注意规范:
+    1 Mapper.xml文件中的namespace与mapper接口的全限定名相同
+    2 Mapper接口方法名和Mapper.xml中定义的每个statement的id相同
+    3 Mapper接口方法的输入参数和Mapper.xml中定义的每个sql的parameterType的类型相同
+    4 Mapper接口方法的输出参数类型和Mapper.xml中定义的sql的resultType的类型相同
+    总结: 不用写dao接口的实现类, mybatis会自动生成
+
+
+动态sql:
+    if配合where  是使用的重点
+    choose
+    trim
+    foreach
+
+代码抽取
+<sql>  <include>
+
+
+typeHandlers标签
+重写类型处理器或者创建你自己的类型处理器来处理不支持的或非标准的类型
+
+
