@@ -8,8 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-interceptor" />
         <module name="spring-test" />
-        <module name="spring-mvc" />
         <module name="spring-exception" />
+        <module name="spring-mvc" />
+        <module name="mybatis-quick" />
       </profile>
     </annotationProcessing>
   </component>

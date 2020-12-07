@@ -13,6 +13,7 @@
         <module>spring-interceptor</module>
         <module>spring-exception</module>
         <module>spring-test</module>
+        <module>mybatis-quick</module>
     </modules>
 
 
@@ -125,6 +126,13 @@
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
+        </dependency>
+
+<!--        mybatis-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.6</version>
         </dependency>
     </dependencies>
 
