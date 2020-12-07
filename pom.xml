@@ -17,6 +17,7 @@
         <module>mybatis-dao</module>
         <module>mybatis-mapper</module>
         <module>mybatis-config</module>
+        <module>mybatis-multi</module>
     </modules>
 
 
@@ -146,6 +147,17 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.4.6</version>
+        </dependency>
+<!--        分页插件-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>4.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 

@@ -9,9 +9,11 @@
         <module name="mybatis-mapper" />
         <module name="mybatis-dao" />
         <module name="spring-interceptor" />
+        <module name="mybatis-config" />
         <module name="spring-mvc" />
         <module name="spring-test" />
         <module name="spring-exception" />
+        <module name="mybatis-multi" />
         <module name="mybatis-quick" />
       </profile>
     </annotationProcessing>
