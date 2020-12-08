@@ -10,6 +10,7 @@
     <typeAliases>
         <typeAlias type="com.hr.domain.User" alias="user"/>
         <typeAlias type="com.hr.domain.Order" alias="order"/>
+        <typeAlias type="com.hr.domain.Role" alias="role"/>
     </typeAliases>
 
 

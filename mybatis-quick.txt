@@ -51,5 +51,22 @@ myBatis核心配置文件常用标签:
     一对多: 多的一方要有一个外键 和另外一个表的主键相关联
     多对多: 有一张中间表, 维护两张主表主键
 
+Mybatis多表查询
+    知识小结
+    Mybatis多表配置方式
+    一对一配置: 使用<resultMap>做配置
+    一对多配置: 使用<resultMap>+<collection>做配置
+    多对多配置: 使用<resultMap>+<collection>做配置
+
+
+Mybatis常用注解开发
+@Insert
+@Update
+@Delete
+@Select
+@Result 实现结果集封装
+@Results 可以与@Result一起使用, 封装多个结果集
+@One 实现一对一结果集封装
+@Many 实现一对多结果集封装
 
 
