@@ -14,6 +14,7 @@
         <module name="spring-mvc" />
         <module name="spring-test" />
         <module name="spring-exception" />
+        <module name="ssm" />
         <module name="mybatis-multi" />
         <module name="mybatis-quick" />
       </profile>
