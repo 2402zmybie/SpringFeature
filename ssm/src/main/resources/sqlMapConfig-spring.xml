@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+
+<!--    别名-->
+    <typeAliases>
+        <!--<typeAlias type="com.hr.domain.Account" alias="account"/>-->
+<!--        第二种方式, 扫包批量添加别名,Account.class 别名是Account或者account-->
+        <package name="com.hr.domain"/>
+    </typeAliases>
+
+
+</configuration>
